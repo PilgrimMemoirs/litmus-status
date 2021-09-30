@@ -7,7 +7,7 @@ RSpec.describe "Api::V1::Services", type: :request do
   describe "GET /index" do
     before { get "/api/v1/services" }
 
-    it 'returns categories' do
+    it 'returns services' do
       expect(json).not_to be_empty
       expect(json.size).to eq(5)
     end
