@@ -8,6 +8,7 @@ RSpec.describe Incident, type: :model do
   end
 
   describe "associations" do
+    it { should have_many(:updates) }
     it { should have_many(:service_incidents) }
     it { should have_many(:services).through(:service_incidents) }
   end
